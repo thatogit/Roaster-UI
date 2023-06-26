@@ -1,0 +1,26 @@
+<div class="container my-5">
+ <h1 class="mb-3">Roaster List</h1>
+
+ <table class="table table-striped-columns" *ngIf="roasters && roasters.length > 0">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>FirstLine</th>
+            <th>SecondLine</th>
+            <th>SupportDate</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let roaster of roasters,let i=index">
+            <td>{{roaster.id}}</td>
+            <td>{{roaster.firstLine}}</td>
+            <td>{{roaster.secondLine}}</td>
+            <td>{{roaster.supportDueDate}}</td>
+            <td><a [routerLink]="['/Roaster','edit',roaster.id]">View</a></td>
+        </tr>
+
+    </tbody>
+ </table>
+ <p *ngIf="!roasters || roasters.length <= 0">No Roaster list found</p>
+</div>

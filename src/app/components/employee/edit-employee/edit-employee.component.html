@@ -1,0 +1,58 @@
+<div class="container my-5">
+    <h2 class="mb-3">Edit Employee</h2>
+
+    <div class="row">
+        <div class="col-6">
+            <form class="row g-3" #form="ngForm" (ngSubmit)="updateEmployee()" >
+              <div class="col-md-6">
+                    <label class="form-label">Employee Id</label>
+                    <input type="text" class="form-control" id="employeeID" 
+                    name="employeeID" [(ngModel)]="employeeDetails.employeeID">
+                  </div>
+
+                  <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName" 
+                  name="firstName" [(ngModel)]="employeeDetails.firstName">
+                </div>
+                
+                <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <label  class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" 
+                  name="lastName" [(ngModel)]="employeeDetails.lastName">
+                </div>
+
+                <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email</label>
+                  <div class="md-form" id="email">
+                    <input type="text" id="email" class="form-control" 
+                    name="email" [(ngModel)]="employeeDetails.email">
+                  </div>
+                </div>
+
+                <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Cell Number</label>
+                  <div class="md-form" id="cellNumber">
+                    <input type="text" id="cellNumber" class="form-control" 
+                    name="cellNumber" [(ngModel)]="employeeDetails.cellNumber">
+                  </div>
+                </div>
+                <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <button type="submit" class="btn btn-primary btn-sm">Save</button> 
+                  <button type="button" class="btn btn-danger btn-sm" (click)="deleteEmployee()">Delete</button>
+                </div>
+              </form>
+        </div>
+    </div>
+    
+</div>

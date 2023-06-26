@@ -1,0 +1,50 @@
+<div class="container my-5">
+    <h2 class="mb-3">Edit Roaster</h2>
+
+    <div class="row">
+        <div class="col-6">
+            <form class="row g-3" #form="ngForm" (ngSubmit)="updateTeam()" >
+                <div class="col-md-6">
+                    <label class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" 
+                    name="id" [(ngModel)]="teamDetails.id">
+                  </div>
+
+                  <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Employee ID</label>
+                  <input type="text" class="form-control" id="employeeID" 
+                  name="employeeID" [(ngModel)]="teamDetails.employeeID">
+                </div>
+                
+                <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <label  class="form-label">Team Name</label>
+                  <input type="text" class="form-control" id="teamName" 
+                  name="teamName" [(ngModel)]="teamDetails.teamName">
+                </div>
+
+                <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Team Leader</label>
+                  <div class="md-form" id="teamLeader">
+                    <input type="text" id="teamLeader" class="form-control" 
+                    name="teamLeader" [(ngModel)]="teamDetails.teamLeader">
+                  </div>
+                </div>
+
+                <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <button type="submit" class="btn btn-primary btn-sm">Save</button> 
+                  <button type="button" class="btn btn-danger btn-sm" (click)="deleteTeam()">Delete</button>
+                </div>
+              </form>
+        </div>
+    </div>
+    
+</div>
+

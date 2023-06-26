@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <h1 class="mb-3">Team List</h1>
+   
+    <table class="table table-striped-columns" *ngIf="teams && teams.length > 0">
+       <thead>
+           <tr>
+               <th>Id</th>
+               <th>Employee ID</th>
+               <th>Team Name</th>
+               <th>Team Leader</th>
+               <th></th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor="let team of teams,let i=index">
+               <td>{{team.id}}</td>
+               <td>{{team.employeeID}}</td>
+               <td>{{team.teamName}}</td>
+               <td>{{team.teamLeader}}</td>
+               <td><a [routerLink]="['/Team','edit',team.id]">View</a></td>
+           </tr>
+           
+       </tbody>
+    </table>
+    <p *ngIf="!teams || teams.length <= 0">No Team list found</p>
+   </div>

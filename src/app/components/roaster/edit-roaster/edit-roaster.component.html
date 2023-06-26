@@ -1,0 +1,50 @@
+<div class="container my-5">
+    <h2 class="mb-3">Edit Roaster</h2>
+
+    <div class="row">
+        <div class="col-6">
+            <form class="row g-3" #form="ngForm" (ngSubmit)="updateRoaster()" >
+                <div class="col-md-6">
+                    <label class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" 
+                    name="id" [(ngModel)]="roasterDetails.id">
+                  </div>
+
+                  <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">First Line</label>
+                  <input type="text" class="form-control" id="firstLine" 
+                  name="firstLine" [(ngModel)]="roasterDetails.firstLine">
+                </div>
+                
+                <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <label  class="form-label">Second Line</label>
+                  <input type="text" class="form-control" id="secondLine" 
+                  name="secondLine" [(ngModel)]="roasterDetails.secondLine">
+                </div>
+
+                <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Support Start Date</label>
+                  <div class="md-form" id="SupportDate">
+                    <input type="date" id="SupportDate" class="form-control" 
+                    name="supportDueDate" [(ngModel)]="roasterDetails.supportDueDate">
+                  </div>
+                </div>
+
+                <div class="col-1">
+                </div>
+                <div class="col-md-6">
+                  <button type="submit" class="btn btn-primary btn-sm">Save</button> 
+                  <button type="button" class="btn btn-danger btn-sm" (click)="deleteRoaster()">Delete</button>
+                </div>
+              </form>
+        </div>
+    </div>
+    
+</div>
+
