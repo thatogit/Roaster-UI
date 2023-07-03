@@ -18,9 +18,9 @@ export class TeamsService {
     return this.httCall.get<Team[]>(this.baseUrl+'TeamAPI');
   }
 
-  addTeam(addTeamRequest : Team): Observable<Team>
+  addTeam(addTeamReq : Team): Observable<Team>
   {
-    return this.httCall.post<Team>(this.baseUrl+'TeamAPI',addTeamRequest);
+    return this.httCall.post<Team>(this.baseUrl+'TeamAPI',addTeamReq);
   }
 
   getTeam(id:number):Observable<Team>
@@ -37,6 +37,8 @@ export class TeamsService {
   {
     return this.httCall.delete<Team>(this.baseUrl + 'TeamAPI/'+id);
   }
+
+  
 
 
 }
